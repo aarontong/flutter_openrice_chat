@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "978129148786",
+    "project_id": "chattix-47b8a",
+    "storage_bucket": "chattix-47b8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978129148786:android:e150073c253bcd405a5beb",
+        "android_client_info": {
+          "package_name": "com.example.flutter_openrice_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978129148786-tsalufdpebpt377c4g66hi6bpg85l68a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCnicdUxebMh67OVtFEYbHa3w7Uqi4S8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978129148786-tsalufdpebpt377c4g66hi6bpg85l68a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
