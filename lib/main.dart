@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_openrice_chat/widgets/login.dart';
 import 'widgets/contact_form.dart';
+import 'widgets/menuBar/menubar.dart';
 import 'widgets/addcontact.dart';
 import 'model/person.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,13 +23,6 @@ void main() async {
 }
 
 class MyAppState extends State<MyStatefulWidget> {
-  var seleectedIndex = 0;
-  static const Widget lw = loginWidget();
-  static const List<Widget> widgetOption = <Widget>[
-    Text('index 0'),
-    Text('index 1'),
-    lw
-  ];
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -51,41 +45,11 @@ class MyAppState extends State<MyStatefulWidget> {
           bodyText2: TextStyle(fontSize: 18.0, fontFamily: 'Hind'),
         ),
       ),
-      home: bottomBar(),
+      home: loginWidget(),
       routes: {
         contactForm.routeName: (ctx) => contactForm(),
+        menuBar.routeName: (ctx) => menuBar(),
       },
-    );
-  }
-
-  void _itemOnTapped(int index) {
-    setState(() {
-      seleectedIndex = index;
-    });
-  }
-
-  Widget bottomBar() {
-    return Scaffold(
-      appBar: AppBar(title: Text('hello')),
-      body: widgetOption.elementAt(seleectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: seleectedIndex,
-        onTap: _itemOnTapped,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.call),
-            label: 'Calls',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.camera),
-            label: 'Camera',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Chats',
-          ),
-        ],
-      ),
     );
   }
 }

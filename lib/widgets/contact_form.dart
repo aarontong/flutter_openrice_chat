@@ -55,7 +55,6 @@ class contactForm extends StatelessWidget {
 
     screenSize = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: AppBar(title: Text('hello')),
         body: Padding(
             padding: const EdgeInsets.all(8.0),
             child: new Container(

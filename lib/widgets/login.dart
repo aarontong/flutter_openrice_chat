@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_openrice_chat/widgets/menuBar/menubar.dart';
 import 'package:flutter_openrice_chat/widgets/username_field.dart';
 import 'package:flutter_openrice_chat/widgets/password_field.dart';
 import 'package:flutter_openrice_chat/widgets/submit_button.dart';
@@ -25,6 +26,7 @@ class loginState extends State<loginWidget> {
 
     // TODO: implement build
     return Scaffold(
+      appBar: AppBar(title: Text('hello')),
       body: Padding(
         padding: EdgeInsets.all(10),
         child: new Container(
@@ -48,8 +50,9 @@ class loginState extends State<loginWidget> {
     );
   }
 
-  void submitClicked(BuildContext context) {
+  void submitClicked(BuildContext ctx) {
     if (_formKey.currentState!.validate()) {
+      Navigator.pushNamed(ctx, menuBar.routeName);
       /*
       personList = Provider.of<PersonList>(context, listen: false);
       var person = Person(
